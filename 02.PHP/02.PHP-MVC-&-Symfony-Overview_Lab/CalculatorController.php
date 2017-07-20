@@ -36,6 +36,15 @@ class CalculatorController extends Controller
             $result = 0;
 
             switch ($operator) {
+                case 'AND':
+                    $result = (int) $leftOperand & (int) $rightOperand; // Bitwise operation
+                    break;
+                case 'OR':
+                    $result = (int) $leftOperand | (int) $rightOperand; // Bitwise operation
+                    break;
+                case 'XOR':
+                    $result = (int) $leftOperand ^ (int) $rightOperand; // Bitwise operation
+                    break;
                 case '+':
                     $result = $leftOperand + $rightOperand;
                     break;
