@@ -38,4 +38,16 @@ class ArticleController extends Controller
         return $this->render('article/create.html.twig',
             array('form' => $form->createView()));
     }
+
+    /**
+     * @Route("/article/{id}", name="article_view")
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function viewArticle($id)
+    {
+        $article = $this->getDoctrine()->getRepository(Article::class)->find($id);
+
+        return $this->render('article/article.html.twig', ['article' => $article]);
+    }
 }
