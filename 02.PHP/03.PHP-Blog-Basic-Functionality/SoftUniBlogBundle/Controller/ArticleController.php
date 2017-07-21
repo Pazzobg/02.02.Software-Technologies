@@ -2,6 +2,7 @@
 
 namespace SoftUniBlogBundle\Controller;
 
+use SoftUniBlogBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use SoftUniBlogBundle\Entity\Article;
 use SoftUniBlogBundle\Form\ArticleType;
@@ -26,7 +27,7 @@ class ArticleController extends Controller
 
         $form->handleRequest($request);
 
-        if  ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $article->setAuthor($this->getUser());
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
@@ -49,5 +50,18 @@ class ArticleController extends Controller
         $article = $this->getDoctrine()->getRepository(Article::class)->find($id);
 
         return $this->render('article/article.html.twig', ['article' => $article]);
+    }
+
+    /**
+     * @Route("/articles/own", name="own_articles")
+     * @@return \Symfony\Component\HttpFoundation\Response
+     */
+    public function myArticles()
+    {
+        /** @var User $currentUser */
+        $currentUser = $this->getUser();
+        $currentUserArticles = $currentUser->getArticles();
+
+        return $this->render('blog/index.html.twig', ['articles' => $currentUserArticles]);
     }
 }
