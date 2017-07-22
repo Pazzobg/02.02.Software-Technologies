@@ -49,6 +49,10 @@ class ArticleController extends Controller
     {
         $article = $this->getDoctrine()->getRepository(Article::class)->find($id);
 
+        if  ($article == null) {
+            return $this->redirectToRoute('blog_index');
+        }
+
         return $this->render('article/article.html.twig', ['article' => $article]);
     }
 
