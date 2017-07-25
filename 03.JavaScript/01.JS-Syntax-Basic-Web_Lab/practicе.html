@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyVeryOwnCalculator</title>
+</head>
+<body>
+    <form>
+        <div>
+            <h3>Първа стойност:</h3>
+        </div>
+        <div>
+            <input type="number" value="0" id="firstVal"/>
+        </div>
+        <div>
+            <h3>Втора стойност:</h3>
+        </div>
+        <div>
+            <input type="number" value="0" id="secondVal"/>
+        </div>
+        <div>
+            <input type="button" id="btn" value="Сумирай" onclick="findSum()"
+            style="margin-top: 18.72px"/>
+        </div>
+        <div>
+            <h3>Общ сбор: <span id="result"></span></h3>
+        </div>
+    </form>
+    <script>
+        function findSum(args) {
+            let num1 = document.getElementById('firstVal').value;
+            let num2 = document.getElementById('secondVal').value;
+            let sum = Number(num1) + Number(num2);
+
+            let resultField = document.getElementById('result');
+            resultField.innerHTML = sum;
+        }
+    </script>
+</body>
+</html>
