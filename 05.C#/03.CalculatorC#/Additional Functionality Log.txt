@@ -1,0 +1,13 @@
+# Added additional operations: 
+	*Modulus - operation; 
+	*Raising to a power (leftOperand is num, rightOperand is power); 
+	*Square Root (of the leftOperand);
+	*Bitwise operation AND; 
+	*Bitwise operation OR; 
+	*Bitwise operation XOR;
+	
+# Added check at Division and Modulus to zero; 
+
+# Disabling of manual input in the Result-field (field is read-only);
+
+# Added input validation on html-level (only digits accepted in entry fields)
