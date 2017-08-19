@@ -1,4 +1,4 @@
-# **TODO List** – Exam Preparation
+# TODO List – Exam Preparation
 You have been tasked to create a simple TODO List application. The application should hold tasks, which are the main app entities.
 The functionality of the application should support creating, listing and deleting tasks.
 The application should persist the data into a database.
