@@ -46,16 +46,16 @@ Everything that has been given to you inside the skeleton is correctly implement
 ## User Interface
 This is the user interface or how the application’s pages should look in their final form (fully implemented). You have several pages, described below:
 
-### Index Page
+#### Index Page
 Route: “/”
 Each of the three columns lists only the tasks in that status:
  
 When the user hovers over a task, the edit button should point to the /edit/{id} route:
  
-### Create Page
+#### Create Page
 Route: “/create”
  
-### Edit Page
+#### Edit Page
 Route: “/edit/{id}”
  
 ## Problem
@@ -65,7 +65,7 @@ Implement the “TeisterMask” Kanban Board app using all the above described 4
 ## Setup
 Before you start working, make sure you download all the dependencies (packages) required for each technology and set up the databases! Below are instructions on how to do this:
 
-### PHP and Symfony
+#### PHP and Symfony
 1.	Go into the root directory of the project (where the bin folder resides)
 2.	Make sure you’ve started your MySQL server (either from XAMPP or standalone)
 3.	Open a shell / command prompt / PowerShell window in the root directory: [Shift] + [Right click]  [Open command window here]
@@ -73,15 +73,15 @@ Before you start working, make sure you download all the dependencies (packages)
 5.	Enter the “php bin/console doctrine:database:create --if-not-exists” command
 6.	Done!
 
-### JavaScript and Node.js
+#### JavaScript and Node.js
 1.	Go into the root directory of the project (where the bin folder resides)
 2.	Make sure you’ve started your MongoDB server (mongod.exe --dbpath path/to/db/directory)
 3.	Open a shell / command prompt / PowerShell window in the root directory: [Shift] + [Right click]  [Open command window here]
 4.	Enter the “npm install” command to restore its Node.js dependencies (described in package.json)
 5.	Done!
 
-### C# and ASP.NET MVC
+#### C# and ASP.NET MVC
 The C# project will automatically resolve its NuGet dependencies (described in packages.config) using the NuGet package restore when the project is built.
 
-### Java and Spring MVC
+#### Java and Spring MVC
 The Java project will automatically resolve its Maven dependencies (described in pom.xml) when the project is built.
